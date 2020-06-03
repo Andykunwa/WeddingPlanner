@@ -1,0 +1,21 @@
+@model Wedding
+
+<h1>Plan your Wedding</h1>
+<a asp-action="Dashboard">Dashboard</a> <a asp-action="LogOut">Log Out</a>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="CreateWedding" asp-controller="Home" method="post">
+    <label>Wedder One: </label>
+    <input asp-for="WedderOne"><br>
+
+    <label>Wedder Two: </label>
+    <input asp-for="WedderTwo"><br>
+
+    <label>Date: </label>
+    <input asp-for="Date" type="Date"><br>
+
+    <label>Wedding Address: </label>
+    <input asp-for="Address"><br>
+
+    <input type="submit" value="Create" class="btn btn-success">
+</form>
